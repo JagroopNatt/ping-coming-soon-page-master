@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+:root {
+  --Blue: hsl(223, 87%, 63%);
+
+  --Pale-Blue: hsl(223, 100%, 88%);
+  --Light-Red: hsl(354, 100%, 66%);
+
+  --Gray: hsl(0, 0%, 59%);
+  --Very-Dark-Blue: hsl(209, 33%, 12%);
+}
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* -----mobile first design----- */
+
+body {
+  font-family: "Libre Franklin", sans-serif;
+
+  text-align: center;
+  line-height: 1.5;
+}
+h1 {
+  font-size: 1.4rem;
+  font-weight: 200;
+  color: var(--Gray);
+  letter-spacing: 1px;
+}
+
+p {
+  font-size: 14px;
+  color: var(--Very-Dark-Blue);
+  font-weight: 500;
+  margin-top: 6px;
+}
+main {
+  width: 90%;
+  margin: 2rem auto;
+  max-width: 400px;
+}
+section {
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+}
+form {
+  margin-top: 1.4rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+span {
+  color: var(--Gray);
+  font-size: 12px;
+}
+strong {
+  color: var(--Very-Dark-Blue);
+}
+button,
+input {
+  width: 100%;
+  border-radius: 2rem;
+  border: 1px solid var(--Gray);
+  margin-top: 1rem;
+}
+
+.logo {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  width: 6rem;
+}
+.email {
+  height: 2.4rem;
+  padding-left: 1rem;
+  outline: none;
+}
+.submit-btn {
+  margin-top: 10px;
+  background-color: var(--Blue);
+  color: #ffffff;
+  letter-spacing: 1px;
+  padding: 11px;
+  cursor: pointer;
+  box-shadow: 2px 5px 2px 0px rgba(21, 37, 161, 0.2);
+}
+.error-msg {
+  color: var(--Light-Red);
+  font-weight: 600;
+  display: none;
+}
+.icons {
+  margin-bottom: 1rem;
+}
+.icon {
+  margin-left: 10px;
+  height: 1.675rem;
+  width: 1.675rem;
+  border-radius: 50%;
+  padding-top: 6px;
+  color: var(--Blue);
+  font-size: 14px;
+  box-shadow: 1px 1px 0px 1px rgba(77, 77, 77, 0.31);
+}
+
+/* ------pseudo classes------ */
+
+.email::placeholder {
+  padding-left: 1.4rem;
+  color: var(--Gray);
+}
+.submit-btn:hover {
+  opacity: 0.8;
+}
+.icon:hover {
+  cursor: pointer;
+  background-color: var(--Blue);
+  color: #ffffff;
+}
+
+/* -----classes for javascript------ */
+
+.error {
+  border: 2px solid var(--Light-Red);
+}
+.active {
+  display: block;
+}
+.success {
+  border: 1px solid rgba(0, 128, 0, 0.768);
+}
+
+/* -----destop design------ */
+
+@media (min-width: 900px) {
+  main {
+    max-width: 700px;
+  }
+  h1 {
+    font-size: 2.8rem;
+  }
+  p {
+    font-size: 1.4rem;
+  }
+  section {
+    margin-top: 6rem;
+  }
+  form {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+  button {
+    width: 12rem;
+    height: 48px;
+    font-size: 1rem;
+  }
+  .email {
+    max-width: 70%;
+    height: 2.8rem;
+  }
+  .error-msg {
+    position: absolute;
+    margin: 80px 0 0 -440px;
+  }
+}
